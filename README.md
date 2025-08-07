@@ -16,6 +16,7 @@ This project provides a machine learning-powered API to predict the species of a
 
 ## 📂 Project Structure
 
+```bash
 /iris-api
 ├── Dockerfile          # Docker configuration for containerization
 ├── main.py             # FastAPI application source code
@@ -23,9 +24,8 @@ This project provides a machine learning-powered API to predict the species of a
 ├── iris_model.joblib   # The serialized, pre-trained model file
 ├── requirements.txt    # Python package dependencies
 └── README.md           # This file
+```
 
-
----
 
 ## ⚙️ Setup and Usage
 
