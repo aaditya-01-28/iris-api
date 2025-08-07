@@ -44,36 +44,42 @@ First, clone the repository and navigate into the project directory. Then, insta
 # Clone the repository
 git clone [https://github.com/aaditya-01-28/iris-api.git](https://github.com/aaditya-01-28/iris-api.git)
 
+```bash
 # Navigate into the project directory
 cd iris-api
 
 # Install dependencies
 pip install -r requirements.txt
+```
 2. Train the Model
 Before starting the API, you must first train the model by running the train.py script. This will generate the iris_model.joblib file.
 
-Bash
-
+```bash
 python train.py
+```
+
 3. Running the Application
 You can run the API either directly with a Uvicorn server or as a Docker container.
 
 Method A: Run with Uvicorn (for Development)
 This method is ideal for development as it supports features like hot-reloading.
 
-Bash
-
+```bash
 uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+```
+
 Method B: Run with Docker (for Production)
 This method showcases the containerized deployment of the application.
 
-Bash
+```bash
 
 # 1. Build the Docker image
 docker build -t iris-api .
 
 # 2. Run the Docker container
 docker run -p 8000:8000 iris-api
+```
+
 4. Accessing the API
 Once the server is running (using either method), the API will be available:
 
@@ -86,7 +92,7 @@ You can test the prediction endpoint by sending a POST request.
 
 Example Request with curl:
 
-Bash
+```bash
 
 curl -X 'POST' \
   'http://localhost:8000/predict' \
@@ -98,7 +104,10 @@ curl -X 'POST' \
   "petal_length": 5.1,
   "petal_width": 1.8
 }'
+```
+
 Expected Successful Response (for a Virginica flower):
+```bash
 
 JSON
 
